@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders',
     'core',
+    'products',
 ]
 # Client 와 View사이에 위치하고 request를 검사하는 곳.
 MIDDLEWARE = [

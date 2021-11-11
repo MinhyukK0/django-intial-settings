@@ -18,5 +18,6 @@ from django.urls import path, include
 from core.views import ping
 
 urlpatterns = [
-    path('ping', ping)
+    path('ping', ping),
+    path('products/', include('products.urls'))
 ]
