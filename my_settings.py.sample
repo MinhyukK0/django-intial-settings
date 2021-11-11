@@ -1,0 +1,13 @@
+SECRET_KEY = '해당 프로젝트 SECRET_KEY' 
+
+DATABASES = {
+    'default' : {
+        'ENGINE': 'django.db.backends.mysql', # 데이터베이스 엔진
+        'NAME': '데이터베이스 이름',
+        'USER': 'mysql유저이름',
+        'PASSWORD': '비밀번호',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+		'OPTIONS': {'charset': 'utf8mb4'} # 장고를 통한 모델에 이모지 및 한글 넣기위한 캐릭터셋
+    }
+}
