@@ -23,3 +23,17 @@ class ProductsView(View):
             category = category
         )
         return JsonResponse({'MESSAGE': 'CREATED'}, status = 201)
+    
+    def get(self, request):
+        products = Product.objects.all()
+        results = []
+        for product in products:
+            results.append(
+                {
+                    'menu' : product.category.menu.name,
+                    'category' : product.category.name,
+                    'product' : product.name
+                }
+            )
+        return JsonResponse({'results': results}, status = 200)
+        
